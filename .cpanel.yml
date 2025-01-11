@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/triojmvc/cyberlyx.cloud/
-    - /bin/cp -R * $DEPLOYPATH
+    - /usr/bin/rsync -av --exclude='.git/' --delete-after ./ $DEPLOYPATH
